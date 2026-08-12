@@ -8,6 +8,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Flowbite CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet"/>
+  <link rel="stylesheet"href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+  rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <!-- Flowbite CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet"/>
+  <link rel="stylesheet"href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+<script>
+  
+    tailwind.config = {
+        darMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#1d4ed8'
+                } 
+            }
+        }
+    }
+    </script>
 </head>
 
 <body >
@@ -15,63 +43,58 @@
     <section class="min-h-screen bg-white text-gray-900">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
-      <!-- Logo -->
-      <a href="#" class="text-sm font-semibold tracking-wide text-black">
-        Mouhamed Diop
-      </a>
-
-      <!-- Navigation Ordinateur -->
-      <div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
-        <a href="#apropos" class="hover:text-black transition">
-          À PROPOS
+        <!-- Logo -->
+        <a href="#" class="text-sm font-semibold tracking-wide text-black">
+            Mouhamed Diop
         </a>
 
-        <a href="#experience" class="hover:text-black transition">
-          EXPÉRIENCE
-        </a>
+        <!-- Navigation Ordinateur (Masquée sur mobile) -->
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
+            <a href="#apropos" class="hover:text-black transition">À PROPOS</a>
+            <a href="#experience" class="hover:text-black transition">EXPÉRIENCE</a>
+            <a href="#projets" class="hover:text-black transition">PROJETS</a>
+            <a href="#competences" class="hover:text-black transition">COMPÉTENCES</a>
+            <a href="#formation" class="hover:text-black transition">FORMATION</a>
+            <a href="#contact" class="hover:text-black transition">CONTACT</a>
+        </div>
 
-        <a href="#projets" class="hover:text-black transition">
-          PROJETS
-        </a>
+        <!-- Bouton CV & Menu Burger Mobile -->
+        <div class="flex items-center gap-4">
+            <a href="#" class="hidden sm:inline-flex items-center gap-2 border border-gray-300 px-5 py-2.5 text-sm font-medium hover:bg-black hover:text-white transitionCV">
+                MON CV <span>↓</span>
+            </a>
 
-        <a href="#competences" class="hover:text-black transition">
-          COMPÉTENCES
-        </a>
-
-        <a href="#formation" class="hover:text-black transition">
-          FORMATION
-        </a>
-
-        <a href="#contact" class="hover:text-black transition">
-          CONTACT
-        </a>
-      </div>
-
-      <!-- Bouton CV & Menu Burger Mobile -->
-      <div class="flex items-center gap-4">
-        <a
-          href="CV MOUHAMED.pdf" target="_blank"
-          class="hidden sm:inline-flex items-center gap-2 border border-gray-300
-                 px-5 py-2.5 text-sm font-medium hover:bg-black
-                 hover:text-white transition"
-        >
-          MON CV
-          <span>↓</span>
-        </a>
-
-        <!-- Icône Menu Burger Noir (Mobile) -->
-        <button type="button" aria-label="Ouvrir le menu" class="md:hidden text-black focus:outline-none p-1">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-
+            <!-- Icône Menu Burger Noir (Mobile) -->
+            <!-- J'ai ajouté l'ID "mobile-menu-button" ici -->
+            <button type="button" id="mobile-menu-button" aria-label="Ouvrir le menu" class="md:hidden text-black focus:outline-none p-1 z-50 relative">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
     </nav>
+
+    <!-- Navigation MOBILE (Masquée par défaut avec 'hidden') -->
+    <!-- J'ai ajouté l'ID "mobile-menu" ici -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute top-full left-0 right-0 shadow-lg transition-all duration-300 ease-in-out">
+        <div class="flex flex-col text-center py-4 text-sm text-gray-600">
+            <a href="#apropos" class="py-3 hover:bg-gray-50 hover:text-black">À PROPOS</a>
+            <a href="#experience" class="py-3 hover:bg-gray-50 hover:text-black">EXPÉRIENCE</a>
+            <a href="#projets" class="py-3 hover:bg-gray-50 hover:text-black">PROJETS</a>
+            <a href="#competences" class="py-3 hover:bg-gray-50 hover:text-black">COMPÉTENCES</a>
+            <a href="#formation" class="py-3 hover:bg-gray-50 hover:text-black">FORMATION</a>
+            <a href="#contact" class="py-3 hover:bg-gray-50 hover:text-black">CONTACT</a>
+            <a href="CV MOUHAMED.pdf" target="_blank" class="py-3 mt-2 mx-6 border border-gray-300 font-medium hover:bg-black hover:text-white">MON CV ↓</a>
+        </div>
+    </div>
 </header>
+
+<!-- Étape 2 : Le Script JavaScript -->
+<!-- Placez ce script juste avant la fermeture de votre balise </body> -->
+
 
 
   <!-- HERO -->
@@ -1446,8 +1469,31 @@
 </section>
 
 
+<script>
+    // 1. On récupère le bouton et le menu grâce à leur ID
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // 2. On écoute le clic sur le bouton
+    menuButton.addEventListener('click', () => {
+        // 3. On "toggle" (ajoute si absente, enlève si présente) la classe 'hidden'
+        // 'hidden' est la classe Tailwind qui cache un élément
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Optionnel : Fermer le menu si on clique sur un lien
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
+
+
     <!-- SCRIPTS EN BAS DE PAGE -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
     <script>
