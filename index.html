@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -10,68 +10,1441 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-white text-gray-800">
+<body >
 
-    <!-- NAVBAR -->
-    <nav class="bg-white border-b border-green-100 fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- LOGO -->
-            <a href="index.html" class="text-2xl font-bold text-green-700">
-                Mouhamed<span class="text-green-500">.dev</span>
-            </a>
+    <section class="min-h-screen bg-white text-gray-900">
 
-            <!-- MENU DESKTOP -->
-            <div class="hidden md:flex items-center gap-8 font-medium">
-                <a href="index.html" class="hover:text-green-600 transition">Accueil</a>
-                <a href="about.html" class="hover:text-green-600 transition">À propos</a>
-                <a href="projects.html" class="hover:text-green-600 transition">Projets</a>
-                <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
-            </div>
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
-            <!-- BURGER MOBILE -->
-            <button id="menu-btn" class="md:hidden relative w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-green-700 transition">
-                <span id="line1" class="w-7 h-0.5 bg-green-700 transition duration-300"></span>
-                <span id="line2" class="w-7 h-0.5 bg-green-700 transition duration-300"></span>
-                <span id="line3" class="w-7 h-0.5 bg-green-700 transition duration-300"></span>
-            </button>
-        </div>
+      <!-- Logo -->
+      <a href="#" class="text-sm font-semibold tracking-wide text-black">
+        Mouhamed Diop
+      </a>
 
-        <!-- MENU MOBILE -->
-        <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-white">
-            <div class="px-6 py-6 flex flex-col gap-5 border-t border-green-100">
-                <a href="index.html" class="mobile-link opacity-0 translate-y-3 transition duration-300 hover:text-green-600">Accueil</a>
-                <a href="about.html" class="mobile-link opacity-0 translate-y-3 transition duration-300 hover:text-green-600">À propos</a>
-                <a href="projects.html" class="mobile-link opacity-0 translate-y-3 transition duration-300 hover:text-green-600">Projets</a>
-                <a href="contact.html" class="mobile-link opacity-0 translate-y-3 transition duration-300 hover:text-green-600">Contact</a>
-            </div>
-        </div>
+      <!-- Navigation Ordinateur -->
+      <div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
+        <a href="#apropos" class="hover:text-black transition">
+          À PROPOS
+        </a>
+
+        <a href="#experience" class="hover:text-black transition">
+          EXPÉRIENCE
+        </a>
+
+        <a href="#projets" class="hover:text-black transition">
+          PROJETS
+        </a>
+
+        <a href="#competences" class="hover:text-black transition">
+          COMPÉTENCES
+        </a>
+
+        <a href="#formation" class="hover:text-black transition">
+          FORMATION
+        </a>
+
+        <a href="#contact" class="hover:text-black transition">
+          CONTACT
+        </a>
+      </div>
+
+      <!-- Bouton CV & Menu Burger Mobile -->
+      <div class="flex items-center gap-4">
+        <a
+          href="CV MOUHAMED.pdf" target="_blank"
+          class="hidden sm:inline-flex items-center gap-2 border border-gray-300
+                 px-5 py-2.5 text-sm font-medium hover:bg-black
+                 hover:text-white transition"
+        >
+          MON CV
+          <span>↓</span>
+        </a>
+
+        <!-- Icône Menu Burger Noir (Mobile) -->
+        <button type="button" aria-label="Ouvrir le menu" class="md:hidden text-black focus:outline-none p-1">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
     </nav>
+</header>
 
-    <!-- HERO -->
-    <section class="min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-                <p class="text-green-600 font-semibold mb-4">Bonjour je suis</p>
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-                    Mouhamed Diop <br>
-                    <span class="text-green-700">Développeur Web</span>
-                </h1>
-                <p class="mt-6 text-gray-600 text-lg">
-                    Je crée des applications web modernes, performantes et adaptées aux besoins des entreprises.
-                </p>
-                <div class="mt-8 flex gap-4">
-                    <a href="projects.html" class="bg-green-600 text-white px-7 py-3 rounded-xl hover:bg-green-700 transition">Voir mes projets</a>
-                    <a href="contact.html" class="border border-green-600 text-green-700 px-7 py-3 rounded-xl hover:bg-green-50 transition">Me contacter</a>
-                </div>
-            </div>
 
-            <div data-aos="zoom-in" class="flex justify-center">
-                <div class="w-80 h-80 rounded-full bg-green-100 flex items-center justify-center">
-                    <img src="imagemouhamed.jpg" class="w-72 h-72 object-cover rounded-full" alt="Mouhamed Diop">
-                </div>
-            </div>
+  <!-- HERO -->
+  <main
+    
+    class="max-w-7xl mx-auto px-6 py-20 lg:py-28" >
+
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+      <!-- COLONNE GAUCHE -->
+      <div>
+
+        <!-- Petit label -->
+        <p class="text-xs uppercase tracking-[0.35em] text-gray-400 mb-8">
+          DOSSIER · Développeur Logiciel · FULL STACK ·  JAVASCRIPT
+        </p>
+
+        <!-- Nom -->
+        <h1
+          class="text-6xl sm:text-7xl lg:text-8xl font-serif
+                 font-light tracking-tight leading-none mb-8"
+        >
+         Mouhamed Diop
+        </h1>
+
+        <!-- Poste -->
+        <h2
+          class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3"
+        >
+          Etudiant en Génie Logiciel &amp; Développeur
+        </h2>
+
+        <!-- Technologies -->
+        <p class="text-sm text-gray-500 mb-8">
+          Développeur Full Stack · JAVASCRIPT · 
+        </p>
+
+        <!-- Description -->
+        <p
+          class="max-w-xl text-gray-600 leading-7 text-sm sm:text-base mb-10"
+        >
+          Je conçois et développe des applications métier qui répondent
+          à de vrais besoins — du recueil du besoin jusqu'à la mise en
+          production.
+        </p>
+
+        <!-- Boutons -->
+        <div class="flex flex-wrap gap-4">
+
+          <a
+            href="#projets"
+            class="inline-flex items-center gap-3 bg-slate-700 text-white
+                   px-6 py-3 text-sm font-medium
+                   hover:bg-black-700 transition"
+          >
+            Voir mes projets
+            <span>→</span>
+          </a>
+
+          <a
+            href="CV MOUHAMED.pdf" target="_blank"
+            class="inline-flex items-center gap-3 border border-gray-300
+                   px-6 py-3 text-sm font-medium
+                   hover:border-black hover:bg-black hover:text-white
+                   transition"
+          >
+            Télécharger mon CV
+            <span>↓</span>
+          </a>
+
         </div>
-    </section>
+
+        <!-- Réseaux -->
+        <div class="flex items-center gap-6 mt-10">
+
+          <a
+            href="https://www.linkedin.com/in/mouhamed-diop-9a071440a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank"
+            class="text-xs text-gray-500 hover:text-black transition">
+            LINKEDIN
+          </a>
+
+          <a
+            href="https://github.com/muhammad18-diop" target="_blank"
+            class="text-xs text-gray-500 hover:text-black transition">
+            GITHUB
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- COLONNE DROITE -->
+      <div class="lg:pl-10">
+
+        <div class="border border-gray-200 p-8 sm:p-10">
+
+          <!-- Titre -->
+          <p
+            class="text-xs uppercase tracking-[0.3em]
+                   text-gray-400 mb-8">
+            FICHE TECHNIQUE
+          </p>
+
+          <!-- Informations -->
+          <div class="space-y-7">
+
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">
+                Base
+              </p>
+
+              <p class="text-sm font-medium">
+                Dakar, Sénégal
+              </p>
+            </div>
+
+
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">
+                Formation
+              </p>
+
+              <p class="text-sm font-medium">
+                Licence en Génie Logiciel — ISI, 2026
+              </p>
+            </div>
+
+
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">
+                Stack principale
+              </p>
+
+              <p class="text-sm font-medium">
+                Node JS · Express JS · PostgreSQL
+              </p>
+            </div>
+
+
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">
+                Frontend
+              </p>
+
+              <p class="text-sm font-medium">
+                React · Taiwind CSS · TypeScript
+              </p>
+            </div>
+
+
+            <div>
+              <p class="text-xs text-gray-400 uppercase mb-1">
+                Spécialités
+              </p>
+
+              <p class="text-sm font-medium">
+                Développement Web · APIs REST · UI Responsive · Bases de données
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+  </main>
+
+
+    <section id="apropos" class="bg-white py-24">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Petit en-tête -->
+    <div class="mb-16">
+      <span class="text-xs font-medium uppercase tracking-[0.3em] text-gray-400">
+        01 — À propos
+      </span>
+    </div>
+
+
+    <!-- Contenu -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center" id="apropos" >
+
+      <!-- IMAGE -->
+      <div>
+        <div class="relative overflow-hidden">
+
+          <img
+            src="imagemouhamed.jpg"
+            alt="Développeur web"
+            class="w-full h-[800px] object-cover"
+          >
+
+          <!-- Petite légende -->
+          <div
+            class="absolute bottom-0 left-0 right-0
+                   bg-white/95 backdrop-blur-sm
+                   px-6 py-4"
+          >
+            <p class="text-xs uppercase tracking-[0.2em] text-gray-400">
+              Développement Web
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- TEXTE -->
+      <div>
+
+        <h2
+          class="text-4xl sm:text-5xl lg:text-6xl
+                 font-serif font-light leading-tight
+                 text-gray-900 mb-8"
+        >
+          Un développeur web
+          qui aime donner vie
+          aux idées.
+        </h2>
+
+
+        <div class="space-y-6 text-gray-600 leading-7 text-sm sm:text-base">
+
+          <p>
+            Je suis un développeur web passionné par la conception
+            et le développement d'applications modernes, performantes
+            et adaptées aux besoins des utilisateurs.
+          </p>
+
+          <p>
+            Mon parcours m'a permis de travailler sur différents types
+            de projets, allant des sites vitrines aux plateformes web
+            et applications métier. J'accorde une attention particulière
+            à l'expérience utilisateur, à la responsivité et à la qualité
+            du code.
+          </p>
+
+          <p>
+            Je travaille principalement avec
+            <strong class="font-medium text-gray-900">
+              HTML, CSS, JavaScript, Tailwind CSS, React, Node.js
+              et Express.js
+            </strong>,
+            tout en développant progressivement mes compétences dans
+            l'écosystème moderne du développement web.
+          </p>
+
+        </div>
+
+
+        <!-- Technologies -->
+        <div class="flex flex-wrap gap-2 mt-10">
+
+          <span
+            class="px-3 py-1.5 text-xs font-medium
+                   text-gray-700 bg-gray-100 rounded-full">
+            HTML
+          </span>
+
+          <span
+            class="px-3 py-1.5 text-xs font-medium
+                   text-gray-700 bg-gray-100 rounded-full" >
+            CSS
+          </span>
+
+          <span
+            class="px-3 py-1.5 text-xs font-medium
+                   text-gray-700 bg-gray-100 rounded-full">
+            JavaScript
+          </span>
+
+          <span
+            class="px-3 py-1.5 text-xs font-medium
+                   text-gray-700 bg-gray-100 rounded-full">
+            React
+          </span>
+
+          <span
+            class="px-3 py-1.5 text-xs font-medium
+                   text-gray-700 bg-gray-100 rounded-full" >
+            Node.js
+          </span>
+
+          <span
+            class="px-3 py-1.5 text-xs font-medium
+                   text-gray-700 bg-gray-100 rounded-full" >
+            Express.js
+          </span>
+
+          <span
+            class="px-3 py-1.5 text-xs font-medium
+                   text-gray-700 bg-gray-100 rounded-full">
+            PostgreSQL
+          </span>
+
+        </div>
+
+
+        <!-- Bouton -->
+        <div class="mt-10">
+
+          <a
+            href="#competences"
+            class="inline-flex items-center gap-3
+                   px-6 py-3 text-sm font-medium
+                   text-white bg-slate-700 rounded-lg
+                   hover:bg-blue-700
+                   focus:ring-4 focus:ring-blue-300">
+            Découvrir mes compétences
+
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-6-6 6 6-6 6"
+              />
+            </svg>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="methode" class="bg-white py-24">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- EN-TÊTE -->
+    <div class="mb-14">
+
+      <p class="mb-3 text-xs uppercase tracking-[0.3em] text-gray-400">
+        Méthode de travail
+      </p>
+
+      <h2 class="text-4xl sm:text-5xl font-serif font-light text-gray-900">
+        De l'idée à la mise en ligne
+      </h2>
+
+    </div>
+
+
+    <!-- CARTES -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+                border border-gray-200">
+
+      <!-- 01 -->
+      <div
+        class="p-8 min-h-[250px]
+               border-b sm:border-b lg:border-b-0
+               sm:border-r lg:border-r
+               border-gray-200
+               hover:bg-gray-50 transition">
+
+        <span class="text-xs text-gray-400">
+          01
+        </span>
+
+        <h3 class="mt-8 text-2xl font-serif text-gray-900">
+          Comprendre
+        </h3>
+
+        <p class="mt-4 text-sm leading-6 text-gray-500">
+          Analyse du besoin, échanges avec le client et
+          définition des objectifs du projet.
+        </p>
+
+      </div>
+
+
+      <!-- 02 -->
+      <div
+        class="p-8 min-h-[250px]
+               border-b lg:border-b-0
+               lg:border-r
+               border-gray-200
+               hover:bg-gray-50 transition" >
+
+        <span class="text-xs text-gray-400">
+          02
+        </span>
+
+        <h3 class="mt-8 text-2xl font-serif text-gray-900">
+          Concevoir
+        </h3>
+
+        <p class="mt-4 text-sm leading-6 text-gray-500">
+          Conception de l'interface, réflexion sur la structure
+          et choix des technologies adaptées.
+        </p>
+
+      </div>
+
+
+      <!-- 03 -->
+      <div
+        class="p-8 min-h-[250px]
+               border-b sm:border-b-0
+               sm:border-r lg:border-r
+               border-gray-200
+               hover:bg-gray-50 transition">
+
+        <span class="text-xs text-gray-400">
+          03
+        </span>
+
+        <h3 class="mt-8 text-2xl font-serif text-gray-900">
+          Développer
+        </h3>
+
+        <p class="mt-4 text-sm leading-6 text-gray-500">
+          Développement frontend et backend, intégration des
+          fonctionnalités et connexion aux bases de données.
+        </p>
+
+      </div>
+
+
+      <!-- 04 -->
+      <div
+        class="p-8 min-h-[250px]
+               hover:bg-gray-50 transition"  >
+
+        <span class="text-xs text-gray-400">
+          04
+        </span>
+
+        <h3 class="mt-8 text-2xl font-serif text-gray-900">
+          Livrer
+        </h3>
+
+        <p class="mt-4 text-sm leading-6 text-gray-500">
+          Tests, corrections, déploiement et mise en ligne
+          du projet.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="experience" class="bg-white py-24">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- EN-TÊTE -->
+    <div class="mb-16">
+
+      <p class="mb-4 text-xs uppercase tracking-[0.3em] text-gray-400">
+        02 — Parcours professionnel
+      </p>
+
+      <h2
+        class="max-w-4xl text-4xl sm:text-5xl lg:text-6xl
+               font-serif font-light leading-tight text-gray-900">
+        Des projets concrets,
+        des solutions pensées
+        pour répondre aux besoins.
+      </h2>
+
+    </div>
+
+
+    <!-- EXPERIENCE 01 -->
+    <div class="relative border-l border-gray-200 ml-3">
+
+      <div class="relative pl-8 pb-16">
+
+        <!-- Point -->
+        <span
+          class="absolute -left-[5px] top-2 w-2.5 h-2.5
+                 bg-gray-900 rounded-full" ></span>
+
+
+        <!-- Header -->
+        <div
+          class="flex flex-col lg:flex-row
+                 lg:items-start lg:justify-between gap-4" >
+
+          <div>
+
+            <h3 class="text-xl font-medium text-gray-900">
+              Développeur Web
+            </h3>
+
+            <p class="mt-2 text-sm text-gray-500">
+              BM COMPANY — Dakar, Sénégal
+            </p>
+
+          </div>
+
+          <span class="text-xs uppercase tracking-wider text-gray-400">
+            2026 — Aujourd'hui
+          </span>
+
+        </div>
+
+
+        <!-- Description -->
+        <p class="max-w-3xl mt-6 text-sm leading-7 text-gray-600">
+          Conception et développement de solutions web adaptées
+          aux besoins des clients de l'entreprise, de l'analyse
+          du besoin jusqu'au déploiement.
+        </p>
+
+
+        <!-- Mission -->
+        <div
+          class="max-w-3xl mt-6 p-6
+                 border border-gray-200
+                 bg-gray-50" >
+
+          <p
+            class="mb-3 text-xs uppercase
+                   tracking-[0.2em] text-gray-400" >
+            Développement de solutions web
+          </p>
+
+          <p class="text-sm leading-6 text-gray-600">
+            Développement de sites vitrines et d'applications web,
+            intégration d'interfaces responsives, développement
+            de fonctionnalités backend et mise en place de solutions
+            adaptées aux problématiques des clients.
+          </p>
+
+        </div>
+
+
+        <!-- Technologies -->
+        <div class="flex flex-wrap gap-2 mt-6">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            HTML
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            CSS
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            JavaScript
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            React
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Node.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            PostgreSQL
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- EXPERIENCE 02 -->
+      <div class="relative pl-8 pb-16">
+
+        <span
+          class="absolute -left-[5px] top-2 w-2.5 h-2.5
+                 bg-gray-300 rounded-full" ></span>
+
+
+        <div
+          class="flex flex-col lg:flex-row
+                 lg:items-start lg:justify-between gap-4">
+
+          <div>
+
+            <h3 class="text-xl font-medium text-gray-900">
+              Développeur Full Stack — Projets Freelance
+            </h3>
+
+            <p class="mt-2 text-sm text-gray-500">
+              Projets personnels &amp; clients
+            </p>
+
+          </div>
+
+          <span class="text-xs uppercase tracking-wider text-gray-400">
+            2025 — Aujourd'hui
+          </span>
+
+        </div>
+
+
+        <p class="max-w-3xl mt-6 text-sm leading-7 text-gray-600">
+          Conception et développement de plateformes web,
+          sites vitrines et applications répondant à des besoins
+          spécifiques.
+        </p>
+
+
+        <div
+          class="max-w-3xl mt-6 p-6
+                 border border-gray-200
+                 bg-gray-50">
+
+          <p
+            class="mb-3 text-xs uppercase
+                   tracking-[0.2em] text-gray-400">
+            Réalisation de projets web
+          </p>
+
+          <p class="text-sm leading-6 text-gray-600">
+            Création d'interfaces modernes et responsives,
+            développement de fonctionnalités dynamiques,
+            authentification des utilisateurs, gestion des données
+            et intégration d'API.
+          </p>
+
+        </div>
+
+
+        <div class="flex flex-wrap gap-2 mt-6">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            React
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Tailwind CSS
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Node.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Express.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            PostgreSQL
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Git
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- EXPERIENCE 03 -->
+      <div class="relative pl-8">
+
+        <span
+          class="absolute -left-[5px] top-2 w-2.5 h-2.5
+                 bg-gray-300 rounded-full" ></span>
+
+
+        <div
+          class="flex flex-col lg:flex-row
+                 lg:items-start lg:justify-between gap-4" >
+
+          <div>
+
+            <h3 class="text-xl font-medium text-gray-900">
+              Fondateur — NextGen Devs
+            </h3>
+
+            <p class="mt-2 text-sm text-gray-500">
+              Communauté de développeurs
+            </p>
+
+          </div>
+
+          <span class="text-xs uppercase tracking-wider text-gray-400">
+            2026 — Aujourd'hui
+          </span>
+
+        </div>
+
+
+        <p class="max-w-3xl mt-6 text-sm leading-7 text-gray-600">
+          Création et animation d'une communauté destinée aux
+          développeurs souhaitant renforcer leurs compétences
+          en développement web.
+        </p>
+
+
+        <div class="flex flex-wrap gap-2 mt-6">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            HTML
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            CSS
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            JavaScript
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            React
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Formation
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="projets" class="bg-white py-24">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="mb-16">
+
+      <p class="mb-4 text-xs uppercase tracking-[0.3em] text-gray-400">
+        03 — Projets
+      </p>
+
+      <h2
+        class="max-w-4xl text-4xl sm:text-5xl lg:text-6xl
+               font-serif font-light leading-tight text-gray-900"
+      >
+        Ce que j’ai réellement construit.
+      </h2>
+
+      <p class="max-w-2xl mt-6 text-sm sm:text-base
+                leading-7 text-gray-500">
+        Une sélection de projets professionnels, personnels,
+        API et académiques réalisés au cours de mon parcours
+        en développement web.
+      </p>
+
+    </div>
+
+
+    <!-- PROJETS -->
+    <div class="grid lg:grid-cols-2 gap-6">
+
+
+      <!-- iHelpSM -->
+      <article
+        class="border border-gray-200 p-7
+               hover:border-gray-400 transition" >
+
+        <div class="flex items-center justify-between mb-5">
+
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-400">
+            Projet client
+          </p>
+
+          <span class="text-xs text-gray-400">
+            01
+          </span>
+
+        </div>
+
+        <h3 class="text-3xl font-serif text-gray-900 mb-4">
+          iHelpSN
+        </h3>
+
+        <p class="text-sm leading-6 text-gray-500 mb-6">
+          Conception et développement d’une solution web moderne
+          avec une interface responsive et intuitive, adaptée
+          aux besoins du projet.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            HTML
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            CSS
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            JavaScript
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Responsive
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- BM COMPANY -->
+      <article
+        class="border border-gray-200 p-7
+               hover:border-gray-400 transition">
+
+        <div class="flex items-center justify-between mb-5">
+
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-400">
+            Projet client
+          </p>
+
+          <span class="text-xs text-gray-400">
+            02
+          </span>
+
+        </div>
+
+        <h3 class="text-3xl font-serif text-gray-900 mb-4">
+          BM COMPANY
+        </h3>
+
+        <p class="text-sm leading-6 text-gray-500 mb-6">
+          Conception et développement du site web de BM COMPANY
+          pour présenter ses services, ses produits, ses
+          réalisations et son activité professionnelle.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            HTML
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Tailwind CSS
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            JavaScript
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Responsive
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- SUNULEARN -->
+      <article
+        class="border border-gray-200 p-7
+               hover:border-gray-400 transition">
+
+        <div class="flex items-center justify-between mb-5">
+
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-400">
+            Projet personnel
+          </p>
+
+          <span class="text-xs text-gray-400">
+            03
+          </span>
+
+        </div>
+
+        <h3 class="text-3xl font-serif text-gray-900 mb-4">
+          SunuLearn
+        </h3>
+
+        <p class="text-sm leading-6 text-gray-500 mb-6">
+          Plateforme e-learning dédiée à la préparation aux concours
+          avec gestion des utilisateurs, programmes, cours,
+          contenus et espace d’administration.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            React
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Tailwind CSS
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Node.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Express.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            PostgreSQL
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- API METEO -->
+      <article
+        class="border border-gray-200 p-7
+               hover:border-gray-400 transition">
+
+        <div class="flex items-center justify-between mb-5">
+
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-400">
+            API REST
+          </p>
+
+          <span class="text-xs text-gray-400">
+            04
+          </span>
+
+        </div>
+
+        <h3 class="text-2xl font-serif text-gray-900 mb-4">
+          API REST — Météo
+        </h3>
+
+        <p class="text-sm leading-6 text-gray-500 mb-6">
+          API REST permettant de récupérer et de manipuler
+          des données météorologiques à travers différents
+          endpoints.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Node.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Express.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            REST API
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- API BIBLIOTHÈQUE -->
+      <article
+        class="border border-gray-200 p-7
+               hover:border-gray-400 transition">
+
+        <div class="flex items-center justify-between mb-5">
+
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-400">
+            API REST
+          </p>
+
+          <span class="text-xs text-gray-400">
+            05
+          </span>
+
+        </div>
+
+        <h3 class="text-2xl font-serif text-gray-900 mb-4">
+          API de gestion de bibliothèque
+        </h3>
+
+        <p class="text-sm leading-6 text-gray-500 mb-6">
+          API REST permettant de gérer les livres, les utilisateurs
+          et les différentes opérations liées à une bibliothèque.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Node.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Express.js
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            PostgreSQL
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            CRUD
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJETS ACADÉMIQUES -->
+      <article
+        class="border border-gray-200 p-7
+               hover:border-gray-400 transition">
+
+        <div class="flex items-center justify-between mb-5">
+
+          <p class="text-xs uppercase tracking-[0.2em] text-gray-400">
+            Projet académique
+          </p>
+
+          <span class="text-xs text-gray-400">
+            06
+          </span>
+
+        </div>
+
+        <h3 class="text-2xl font-serif text-gray-900 mb-4">
+          Projets académiques
+        </h3>
+
+        <p class="text-sm leading-6 text-gray-500 mb-6">
+          Ensemble de projets réalisés dans le cadre de ma formation
+          en Génie Logiciel autour de la programmation, du
+          développement web et des bases de données.
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            JavaScript
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            React
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            SQL
+          </span>
+
+          <span class="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded-full">
+            Algorithmique
+          </span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="competences" class="bg-white py-24">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="mb-16">
+
+      <p class="mb-4 text-xs uppercase tracking-[0.3em] text-gray-400">
+        04 — Compétences
+      </p>
+
+      <h2
+        class="max-w-5xl text-4xl sm:text-5xl lg:text-6xl
+               font-serif font-light leading-tight text-gray-900"
+      >
+        Une stack construite projet après projet.
+      </h2>
+
+    </div>
+
+
+    <!-- GRID COMPÉTENCES -->
+    <div class="border border-gray-200 grid md:grid-cols-2">
+
+      <!-- FRONTEND -->
+      <div class="p-8 border-b md:border-r border-gray-200">
+
+        <div class="flex items-center gap-4 mb-6">
+
+          <span class="text-xs text-gray-400">
+            01
+          </span>
+
+          <h3 class="text-xl font-serif text-gray-900">
+            Frontend
+          </h3>
+
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-4">
+
+          <span class="text-sm text-gray-500">
+            HTML
+          </span>
+
+          <span class="text-sm text-gray-500">
+            CSS
+          </span>
+
+          <span class="text-sm text-gray-500">
+            JavaScript
+          </span>
+
+          <span class="text-sm text-gray-500">
+            React
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Tailwind CSS
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Bootstrap
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Flowbite
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Responsive Design
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- BACKEND -->
+      <div class="p-8 border-b border-gray-200">
+
+        <div class="flex items-center gap-4 mb-6">
+
+          <span class="text-xs text-gray-400">
+            02
+          </span>
+
+          <h3 class="text-xl font-serif text-gray-900">
+            Backend
+          </h3>
+
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-4">
+
+          <span class="text-sm text-gray-500">
+            Node.js
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Express.js
+          </span>
+
+          <span class="text-sm text-gray-500">
+            API REST
+          </span>
+
+          <span class="text-sm text-gray-500">
+            CRUD
+          </span>
+
+          <span class="text-sm text-gray-500">
+            JWT
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Authentification
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- DATABASE -->
+      <div class="p-8 border-b md:border-b-0 md:border-r border-gray-200">
+
+        <div class="flex items-center gap-4 mb-6">
+
+          <span class="text-xs text-gray-400">
+            03
+          </span>
+
+          <h3 class="text-xl font-serif text-gray-900">
+            Bases de données
+          </h3>
+
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-4">
+
+          <span class="text-sm text-gray-500">
+            PostgreSQL
+          </span>
+
+          <span class="text-sm text-gray-500">
+            MySQL
+          </span>
+
+          <span class="text-sm text-gray-500">
+            SQL
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Supabase
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Modélisation des données
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- OUTILS & MÉTHODES -->
+      <div class="p-8">
+
+        <div class="flex items-center gap-4 mb-6">
+
+          <span class="text-xs text-gray-400">
+            04
+          </span>
+
+          <h3 class="text-xl font-serif text-gray-900">
+            Outils & Méthodes
+          </h3>
+
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-4">
+
+          <span class="text-sm text-gray-500">
+            Git
+          </span>
+
+          <span class="text-sm text-gray-500">
+            GitHub
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Postman
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Figma
+          </span>
+
+          <span class="text-sm text-gray-500">
+            MVC
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Architecture logicielle
+          </span>
+
+          <span class="text-sm text-gray-500">
+            Conception d’API
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- DEUXIÈME BLOC -->
+    <div
+      class="mt-8 border border-gray-200
+             p-8 lg:p-10"
+    >
+
+      <div class="grid lg:grid-cols-3 gap-10 items-start">
+
+        <!-- LABEL -->
+        <div>
+
+          <p class="text-xs uppercase tracking-[0.25em] text-gray-400 mb-4">
+            05 — Développement web
+          </p>
+
+          <h3 class="text-2xl font-serif text-gray-900">
+            Concevoir, développer, déployer.
+          </h3>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+        <div class="lg:col-span-2">
+
+          <p class="text-sm leading-7 text-gray-500">
+            Je conçois et développe des applications web modernes,
+            de l’interface utilisateur jusqu’au backend et à la
+            base de données. Je m’intéresse particulièrement aux
+            applications responsive, aux API REST et à la création
+            de solutions adaptées aux besoins réels.
+          </p>
+
+
+          <!-- TAGS -->
+          <div class="flex flex-wrap gap-2 mt-8">
+
+            <span class="px-3 py-1.5 text-xs border border-gray-200 text-gray-500">
+              Frontend
+            </span>
+
+            <span class="px-3 py-1.5 text-xs border border-gray-200 text-gray-500">
+              Backend
+            </span>
+
+            <span class="px-3 py-1.5 text-xs border border-gray-200 text-gray-500">
+              Full Stack
+            </span>
+
+            <span class="px-3 py-1.5 text-xs border border-gray-200 text-gray-500">
+              API REST
+            </span>
+
+            <span class="px-3 py-1.5 text-xs border border-gray-200 text-gray-500">
+              Responsive
+            </span>
+
+            <span class="px-3 py-1.5 text-xs border border-gray-200 text-gray-500">
+              Architecture MVC
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</section>
+
 
     <!-- SCRIPTS EN BAS DE PAGE -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
